@@ -88,6 +88,9 @@ export default function Loginscreen() {
           </div>
           
           <a style={{color:'black'}} href="/register" className='mt-3'>Click Here To Register</a>
+          <p>Demo credentials</p>
+            <p>Email: demo@example.com</p>
+            <p>Password: demo123</p>
         </div>
       </div>
     </div>
