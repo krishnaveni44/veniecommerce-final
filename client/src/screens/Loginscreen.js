@@ -89,8 +89,12 @@ export default function Loginscreen() {
           
           <a style={{color:'black'}} href="/register" className='mt-3'>Click Here To Register</a>
           <p style={ {margin: "0 0 0 20px", textAlign: "left",width: "100%",fontFamily:"'Roboto','Helvetica','Arial',sans-serif",fontSize:"14px"} }>Demo credentials</p>
-          <p style={ {margin: "0 0 0 20px", textAlign: "left",width: "100%",fontFamily:"'Roboto','Helvetica','Arial',sans-serif",fontSize:"14px"} }>Email: demo@example.com</p>
+          <p style={ {margin: "0 0 0 20px", textAlign: "left",width: "100%",fontFamily:"'Roboto','Helvetica','Arial',sans-serif",fontSize:"14px"} }>User: demo@example.com</p>
           <p style={ {margin: "0 0 0 20px", textAlign: "left",width: "100%",fontFamily:"'Roboto','Helvetica','Arial',sans-serif",fontSize:"14px"} }>Password: demo123</p>
+          
+          <p style={ {margin: "0 0 0 20px", textAlign: "left",width: "100%",fontFamily:"'Roboto','Helvetica','Arial',sans-serif",fontSize:"14px"} }>Admin: admin@example.com</p>
+          <p style={ {margin: "0 0 0 20px", textAlign: "left",width: "100%",fontFamily:"'Roboto','Helvetica','Arial',sans-serif",fontSize:"14px"} }>Password: admin123</p>
+
         </div>
       </div>
     </div>
