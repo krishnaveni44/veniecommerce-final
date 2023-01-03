@@ -30,3 +30,8 @@ app.use('/api/orders/',orderRoute)
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => console.log(`Node JS Server Started`));
+
+
+
+
+// "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
