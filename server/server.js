@@ -38,3 +38,6 @@ app.get('/', function (request, response)
 
 
 // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+// "client-install": "npm install --prefix client",
+// "client": "npm start --prefix client",
+// "dev": "concurrently \"npm run server\" \"npm run client\"",
