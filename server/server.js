@@ -31,7 +31,10 @@ const port = process.env.PORT || 8000;
 
 app.listen(port, () => console.log(`Node JS Server Started`));
 
-
+app.get('/', function (request, response)
+{ 
+   response.send('Hello World ✨🎉✨')
+}); 
 
 
 // "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
