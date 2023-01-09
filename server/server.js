@@ -10,7 +10,10 @@ const path = require('path');
 var cors = require('cors')
 
 app.use(cors({
-    origin: "https://jovial-crumble-a8dad8.netlify.app/",
+    "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
 }))
 
 app.use('/api/products/' , productsRoute)
