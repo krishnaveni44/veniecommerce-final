@@ -7,10 +7,15 @@ var userRoute = require('./routes/userRoute')
 var orderRoute = require('./routes/orderRoute')
 app.use(bodyParser.json());
 const path = require('path');
+var cors = require('cors')
+
+app.use(cors({
+    origin: "https://jovial-crumble-a8dad8.netlify.app/",
+}))
+
 app.use('/api/products/' , productsRoute)
 app.use('/api/users/',userRoute)
 app.use('/api/orders/',orderRoute)
-
 
     // if(process.env.NODE_ENV === 'production')
     // {
