@@ -3,7 +3,7 @@ export const getAllProducts = () => (dispatch) => {
   dispatch({ type: "GET_PRODUCTS_REQUEST" });
 
   axios
-    .get("/api/products/getallproducts")
+    .get("https://veniecommerce-final.vercel.app/api/products/getallproducts")
     .then((res) => {
       console.log(res);
 
@@ -19,7 +19,7 @@ export const getProductById = (productid) => (dispatch) => {
   dispatch({ type: "GET_PRODUCTBYID_REQUEST" });
 
   axios
-    .post("/api/products/getproductbyid", { productid })
+    .post("https://veniecommerce-final.vercel.app/api/products/getproductbyid", { productid })
     .then((res) => {
       console.log(res);
 
@@ -38,7 +38,7 @@ export const filterProducts=(searchKey , sortKey , category)=>dispatch=>{
     var filteredproducts ;
     dispatch({type:'GET_PRODUCTS_REQUEST'})
 
-    axios.get('/api/products/getallproducts').then(res=>{
+    axios.get('https://veniecommerce-final.vercel.app/api/products/getallproducts').then(res=>{
 
         filteredproducts = res.data      
 
@@ -88,7 +88,7 @@ export const addProductReview = (review , productid)=>(dispatch , getState)=>{
     
   dispatch({type:'ADD_PRODUCT_REVIEW_REQUEST'})
   const currentUser = getState().loginReducer.currentUser
-  axios.post('/api/products/addreview' , {review , productid , currentUser}).then(res=>{
+  axios.post('https://veniecommerce-final.vercel.app/api/products/addreview' , {review , productid , currentUser}).then(res=>{
     console.log(res);
     dispatch({type:'ADD_PRODUCT_REVIEW_SUCCESS'})
     alert('Your review submitted successfully')
@@ -108,7 +108,7 @@ export const deleteProduct=(productid)=>dispatch=>{
 
   dispatch({type:'DELETE_PRODUCT_REQUEST'})
 
-  axios.post('/api/products/deleteproduct' , {productid}).then(res=>{
+  axios.post('https://veniecommerce-final.vercel.app/api/products/deleteproduct' , {productid}).then(res=>{
 
     dispatch({type:'DELETE_PRODUCT_SUCCESS' , payload : res.data})
     alert('Product deleted successfully')
@@ -128,7 +128,7 @@ export const addProduct =(product)=> dispatch=>{
 
       dispatch({type:'ADD_PRODUCT_REQUEST'})
 
-      axios.post('/api/products/addproduct' , {product}).then(res=>{
+      axios.post('https://veniecommerce-final.vercel.app/api/products/addproduct' , {product}).then(res=>{
         console.log(res);
         dispatch({type:'ADD_PRODUCT_SUCCESS'})
         window.location.reload()
@@ -144,7 +144,7 @@ export const updateProduct =(productid , updatedproduct)=> dispatch=>{
 
   dispatch({type:'UPDATE_PRODUCT_REQUEST'})
 
-  axios.post('/api/products/updateproduct' , {productid , updatedproduct}).then(res=>{
+  axios.post('https://veniecommerce-final.vercel.app/api/products/updateproduct' , {productid , updatedproduct}).then(res=>{
     console.log(res);
     dispatch({type:'UPDATE_PRODUCT_SUCCESS'})
     window.location.href='/admin/productslist'
